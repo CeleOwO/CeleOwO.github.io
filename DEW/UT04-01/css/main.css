@@ -1,11 +1,52 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+
+/*--Form--*/
+
 form {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
     align-items: center;
     justify-content: center;
+    background-color: rgb(216, 146, 169);
     margin: 0 auto;
 }
+/*--Input required--*/
+
+input[type="text"]:required{
+    border-color: rgba(255, 0, 0, 0.452);
+}
+
+input[type="password"]:required{
+    border-color: rgba(255, 0, 0, 0.452);
+}
+
+input[type="checkbox"]:required{
+    border-color: rgba(255, 0, 0, 0.452);
+}
+
+input[type="tel"]:required{
+    border-color: rgba(255, 0, 0, 0.452);
+}
+
+input[type="number"]:required{
+    border-color: rgba(255, 0, 0, 0.452);
+}
+
+select:required{
+    border-color: rgba(255, 0, 0, 0.452);
+}
+
+textarea:required{
+    border-color: rgba(255, 0, 0, 0.452);
+}
+
+
+/*--Fieldset 1--*/
 
 .field1{
     display: grid;
@@ -30,10 +71,12 @@ form {
     grid-row: 2;
 }
 
+/*--Fieldset 2--*/
+
 .field2{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 0.5fr;
     grid-gap: 1em;
     margin: 1em;
     width: auto;
@@ -54,6 +97,92 @@ form {
     grid-row: 3;
 }
 
+.aficiones{
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.musica{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.deporte{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.videojuegos{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.manualidades{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.artes{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.lectura{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+/*--Fieldset 3--*/
+
+.field3{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-gap: 1.5em;
+}
+
+.field3-titu{
+    display: grid;
+    grid-row: 1;
+}
+
+.field3-descrip{
+    display: grid;
+    grid-row: 2;
+}
+
+.field3 input[type="text"]{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.field3 textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/*--Submit--*/
+
+input[type="submit"]{
+    background-color: #d3d3d3;
+    border: none;
+    color: black;
+    padding: 0.4em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: palevioletred;
 }

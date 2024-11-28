@@ -7,74 +7,78 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="https://www.w3schools.com/action_page.php">
+    <form action="https://www.w3schools.com/action_page.php" id="form">
         <fieldset class="field1">
             <legend>Datos Usuario</legend>
             <label for="nombre">Nombre de usuario
-                <input type="text" name="nombre" id="nombre" placeholder="UserName">
+                <input required type="text" name="nombre" id="nombre" placeholder="UserName">
             </label>
             <label for="contra">Contraseña
-                <input type="password" name="contra" id="contra" placeholder="Introduce Contraseña">
+                <input required type="password" name="contra" id="contra" placeholder="Introduce Contraseña">
             </label>
             <label for="checkpass" class="checkpass">Mostrar Contraseña
-                <input type="checkbox" name="checkpass" id="checkpass" class="checkpass">
+                <input type="checkbox" name="checkpass" id="checkpass" class="checkpass" onchange="showPassword()">
             </label>
         </fieldset>
         <fieldset class="field2">
             <legend>Datos Personales</legend>
             <div class="persodata">
                 <label for="nombre">Nombre
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input required type="text" name="nombre" id="nombre" placeholder="Nombre">
                 </label>
                 <label for="apellido">Apellidos
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellidos">
+                    <input required type="text" name="apellido" id="apellido" placeholder="Apellidos">
                 </label>
                 <label for="telefono">Telefono
-                    <input type="tel" name="telefono" id="telefono" placeholder="Ejem: (+34)922123123">
+                    <input required type="tel" name="telefono" id="telefono" placeholder="Ejem: (+34)922123123" pattern="(\+34)?[69]\d{8}">
                 </label>
                 <label for="codPostal">Código Postal
-                    <input type="number" name="codPostal" id="codPostal" placeholder="39XXX">
+                    <input required type="number" name="codPostal" id="codPostal" placeholder="39XXX">
                 </label>
             </div>
             <div class="dni-etc">
                 <label for="dni">DNI/NIE
-                    <select name="dni" id="dni">
+                    <select required name="dni" id="dni">
                         <option value="--" selected>---</option>
                         <option value="dni">DNI</option>
                         <option value="nie">NIE</option>
                     </select>
-                    <input type="text" name="dni" id="dni" placeholder="12345678A">
+                    <input required type="text" name="dni" id="dni" placeholder="12345678A">
                 </label>
                 <label for="tipocuenta" class="tipoacc">Crear cuenta como:
                     <label for="particular">Particular
-                        <input type="radio" name="tipocuenta" id="particular" value="particular">
+                        <input required type="radio" name="tipocuenta" id="particular" value="particular">
                     </label>
                     <label for="empresa">Empresa
-                        <input type="radio" name="tipocuenta" id="empresa" value="empresa">
+                        <input required type="radio" name="tipocuenta" id="empresa" value="empresa">
                     </label>
                 </label>
                 <label for="anionacimiento">Año de Nacimiento
-                <input type="date" name="anionacimiento" id="anionacimiento">
+                <select required name="anionacimiento" id="anionacimiento">
+                    <option value="1990">1990</option>
+                    <option value="2010">2010</option>
+                    <option value="2020">2020</option>
+                </select>
                 </label>
             </div>
             <div class="hobbies">
-                <label for="aficiones">Elige tus aficiones:
-                    <label for="musica">Música
+                <label for="aficiones" class="aficiones">Elige tus aficiones:
+                    <label for="musica" class="musica">Música
                         <input type="checkbox" name="aficiones" id="musica">
                     </label>
-                    <label for="deporte">Deporte
+                    <label for="deporte" class="deporte">Deporte
                         <input type="checkbox" name="aficiones" id="deporte">
                     </label>
-                    <label for="videojuegos">Videojuegos
+                    <label for="videojuegos" class="videojuegos">Videojuegos
                         <input type="checkbox" name="aficiones" id="videojuegos">
                     </label>
-                    <label for="manualidades">Manualidades
+                    <label for="manualidades" class="manualidades">Manualidades
                         <input type="checkbox" name="aficiones" id="manualidades">
                     </label>
-                    <label for="artes">Artes
+                    <label for="artes" class="artes">Artes
                         <input type="checkbox" name="aficiones" id="artes">
                     </label>
-                    <label for="lectura">Lectura
+                    <label for="lectura" class="lectura">Lectura
                         <input type="checkbox" name="aficiones" id="lectura">
                     </label>
                 </label>
@@ -82,12 +86,16 @@
         </fieldset>
         <fieldset class="field3">
             <legend>Datos Publicación</legend>
-            <label for="titulo">Título</label>
-            <input type="text" name="titulo" id="titulo" placeholder="Título de la publicación">
-            <label for="descripcion">Descripción</label>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción de la publicación"></textarea>
+            <label for="titulo" class="field3-titu">Título:
+                <input required type="text" name="titulo" id="titulo" placeholder="Título de la publicación">
+            </label>
+            <label for="descripcion" class="field3-descrip">Descripción:
+                <textarea required name="descripcion" id="descripcion" cols="30" rows="10"  form="form">
+                </textarea>
+            </label>
         </fieldset>
         <input type="submit" value="Enviar a w3school">
     </form>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
