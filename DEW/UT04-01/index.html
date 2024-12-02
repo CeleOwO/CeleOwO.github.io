@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="https://www.w3schools.com/action_page.php" id="form">
+    <form action="https://www.w3schools.com/action_page.php" id="form" novalidate>
         <fieldset class="field1">
             <legend>Datos Usuario</legend>
-            <label for="nombre">Nombre de usuario
-                <input required type="text" name="nombre" id="nombre" placeholder="UserName">
+            <label for="nombreUser">Nombre de usuario
+                <input required type="text" name="nombreUser" id="nombreUser" placeholder="UserName">
             </label>
             <label for="contra">Contraseña
                 <input required type="password" name="contra" id="contra" placeholder="Introduce Contraseña">
@@ -30,7 +30,7 @@
                     <input required type="text" name="apellido" id="apellido" placeholder="Apellidos">
                 </label>
                 <label for="telefono">Telefono
-                    <input required type="tel" name="telefono" id="telefono" placeholder="Ejem: (+34)922123123" pattern="(\+34)?[69]\d{8}">
+                    <input required type="tel" name="telefono" id="telefono" placeholder="Ejem: (+34)922123123" pattern="(+34)[0-9]{9}">
                 </label>
                 <label for="codPostal">Código Postal
                     <input required type="number" name="codPostal" id="codPostal" placeholder="39XXX">
@@ -43,7 +43,7 @@
                         <option value="dni">DNI</option>
                         <option value="nie">NIE</option>
                     </select>
-                    <input required type="text" name="dni" id="dni" placeholder="12345678A">
+                    <input required type="text" name="dni" id="dni" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]{1}">
                 </label>
                 <label for="tipocuenta" class="tipoacc">Crear cuenta como:
                     <label for="particular">Particular
@@ -54,7 +54,7 @@
                     </label>
                 </label>
                 <label for="anionacimiento">Año de Nacimiento
-                <select required name="anionacimiento" id="anionacimiento">
+                <select name="anionacimiento" id="anionacimiento">
                     <option value="1990">1990</option>
                     <option value="2010">2010</option>
                     <option value="2020">2020</option>

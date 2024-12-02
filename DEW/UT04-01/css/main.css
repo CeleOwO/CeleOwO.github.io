@@ -18,31 +18,31 @@ form {
 /*--Input required--*/
 
 input[type="text"]:required{
-    border-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="password"]:required{
-    border-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="checkbox"]:required{
-    border-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="tel"]:required{
-    border-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="number"]:required{
-    border-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 select:required{
-    border-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 textarea:required{
-    border-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 
