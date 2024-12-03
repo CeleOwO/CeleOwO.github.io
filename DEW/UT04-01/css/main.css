@@ -12,12 +12,12 @@ form {
     grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
     align-items: center;
     justify-content: center;
-    background-color: rgb(216, 146, 169);
+    background-color: lightgrey;
     margin: 0 auto;
 }
 /*--Input required--*/
 
-input[type="text"]:required{
+/* input[type="text"]:required{
     background-color: rgba(255, 0, 0, 0.452);
 }
 
@@ -43,7 +43,7 @@ select:required{
 
 textarea:required{
     background-color: rgba(255, 0, 0, 0.452);
-}
+} */
 
 
 /*--Fieldset 1--*/

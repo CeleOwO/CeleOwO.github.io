@@ -7,14 +7,15 @@
     <title>Document</title>
 </head>
 <body>
+    <script type="module" src="./js/main.js"></script>
     <form action="https://www.w3schools.com/action_page.php" id="form" novalidate>
         <fieldset class="field1">
             <legend>Datos Usuario</legend>
-            <label for="nombreUser">Nombre de usuario
-                <input required type="text" name="nombreUser" id="nombreUser" placeholder="UserName">
+            <label for="NombreUsuario">Nombre de usuario
+                <input required type="text" name="NombreUsuario" id="nombreUser" placeholder="UserName">
             </label>
-            <label for="contra">Contraseña
-                <input required type="password" name="contra" id="contra" placeholder="Introduce Contraseña">
+            <label for="Contrasena">Contraseña
+                <input required type="password" name="Contrasena" id="contra" placeholder="Introduce Contraseña" maxlength="8" minlength="8">
             </label>
             <label for="checkpass" class="checkpass">Mostrar Contraseña
                 <input type="checkbox" name="checkpass" id="checkpass" class="checkpass" onchange="showPassword()">
@@ -23,79 +24,76 @@
         <fieldset class="field2">
             <legend>Datos Personales</legend>
             <div class="persodata">
-                <label for="nombre">Nombre
-                    <input required type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <label for="Nombre">Nombre
+                    <input required type="text" name="Nombre" id="nombre" placeholder="Nombre" minlength="4" maxlength="20">
                 </label>
-                <label for="apellido">Apellidos
-                    <input required type="text" name="apellido" id="apellido" placeholder="Apellidos">
+                <label for="Apellidos">Apellidos
+                    <input required type="text" name="Apellidos" id="apellido" placeholder="Apellidos" minlength="4" maxlength="20">
                 </label>
-                <label for="telefono">Telefono
-                    <input required type="tel" name="telefono" id="telefono" placeholder="Ejem: (+34)922123123" pattern="(+34)[0-9]{9}">
+                <label for="Telefono">Telefono
+                    <input required type="tel" name="Telefono" id="telefono" placeholder="Ejem: (+34)922123123" pattern="(+34)[0-9]{9}">
                 </label>
-                <label for="codPostal">Código Postal
-                    <input required type="number" name="codPostal" id="codPostal" placeholder="39XXX">
+                <label for="CodigoPostal">Código Postal
+                    <input required type="number" name="CodigoPostal" id="codPostal" placeholder="38XXX" pattern="[3]{1}[8]{1}[0-9]{3}">
                 </label>
             </div>
             <div class="dni-etc">
-                <label for="dni">DNI/NIE
-                    <select required name="dni" id="dni">
+                <label for="TipoDocumento">DNI/NIE
+                    <select required name="TipoDocumento" id="dni">
                         <option value="--" selected>---</option>
                         <option value="dni">DNI</option>
                         <option value="nie">NIE</option>
                     </select>
-                    <input required type="text" name="dni" id="dni" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]{1}">
+                    <input required type="text" name="DniNie" id="dniNie" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]{1}">
                 </label>
-                <label for="tipocuenta" class="tipoacc">Crear cuenta como:
+                <label for="CuentaComo" class="tipoacc">Crear cuenta como:
                     <label for="particular">Particular
-                        <input required type="radio" name="tipocuenta" id="particular" value="particular">
+                        <input required type="radio" name="CuentaComo" id="particular" value="particular">
                     </label>
                     <label for="empresa">Empresa
-                        <input required type="radio" name="tipocuenta" id="empresa" value="empresa">
+                        <input required type="radio" name="CuentaComo" id="empresa" value="empresa">
                     </label>
                 </label>
-                <label for="anionacimiento">Año de Nacimiento
-                <select name="anionacimiento" id="anionacimiento">
-                    <option value="1990">1990</option>
-                    <option value="2010">2010</option>
-                    <option value="2020">2020</option>
+                <label for="AnioNacimiento">Año de Nacimiento
+                <select name="AnioNacimiento" id="anionacimiento">
+
                 </select>
                 </label>
             </div>
             <div class="hobbies">
-                <label for="aficiones" class="aficiones">Elige tus aficiones:
+                <label for="Aficiones" class="aficiones">Elige tus aficiones:
                     <label for="musica" class="musica">Música
-                        <input type="checkbox" name="aficiones" id="musica">
+                        <input type="checkbox" name="MU" id="musica">
                     </label>
                     <label for="deporte" class="deporte">Deporte
-                        <input type="checkbox" name="aficiones" id="deporte">
+                        <input type="checkbox" name="DE" id="deporte">
                     </label>
                     <label for="videojuegos" class="videojuegos">Videojuegos
-                        <input type="checkbox" name="aficiones" id="videojuegos">
+                        <input type="checkbox" name="VI" id="videojuegos">
                     </label>
                     <label for="manualidades" class="manualidades">Manualidades
-                        <input type="checkbox" name="aficiones" id="manualidades">
+                        <input type="checkbox" name="MA" id="manualidades">
                     </label>
                     <label for="artes" class="artes">Artes
-                        <input type="checkbox" name="aficiones" id="artes">
+                        <input type="checkbox" name="AR" id="artes">
                     </label>
                     <label for="lectura" class="lectura">Lectura
-                        <input type="checkbox" name="aficiones" id="lectura">
+                        <input type="checkbox" name="LE" id="lectura">
                     </label>
                 </label>
             </div>
         </fieldset>
         <fieldset class="field3">
             <legend>Datos Publicación</legend>
-            <label for="titulo" class="field3-titu">Título:
-                <input required type="text" name="titulo" id="titulo" placeholder="Título de la publicación">
+            <label for="PublicaciónTitulo" class="field3-titu">Título:
+                <input required type="text" name="PublicaciónTitulo" id="titulo" placeholder="Título de la publicación" maxlength="15" minlength="4">
             </label>
-            <label for="descripcion" class="field3-descrip">Descripción:
-                <textarea required name="descripcion" id="descripcion" cols="30" rows="10"  form="form">
+            <label for="PublicacionDescripcion" class="field3-descrip">Descripción:
+                <textarea required name="PublicacionDescripcion" id="descripcion" cols="30" rows="10"  form="form" minlength="4" maxlength="120">
                 </textarea>
             </label>
         </fieldset>
         <input type="submit" value="Enviar a w3school">
     </form>
-    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

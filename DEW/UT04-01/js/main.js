@@ -22,7 +22,23 @@ DOM.form.addEventListener('submit', (e) => {
         e.preventDefault()
         alert(DOM.email.validationMessage);
     }
+    if(!DOM.contra,validationMessage == "")
+    {
+        e.preventDefault()
+        alert(DOM.contra.validationMessage)
+    }
 });
+
+    export function anios() {
+        const selectElement = document.getElementById('anionacimiento');
+
+        for (let year = 1920; year <= 2010; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.text = year;
+            selectElement.appendChild(option);
+        }
+    }
 
 
 export function showPassword() {

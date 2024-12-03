@@ -1,0 +1,57 @@
+Programación del formulario que hemos visto en clase
+
+La valoración de la actividad se realiza mediante preguntas al alumnado (el día ...) y mediante revisión del código y del funcionamiento del formulario.
+
+Los criterios de calificación se enumeran a continuación.
+Envío de datos/atributos
+
+    El formulario envía los siguientes datos/atributos y con estos nombres exactos: NombreUsuario, Contrasena, Nombre, Apellidos, Telefono, CodigoPostal, TipoDocumento, DniNie, CuentaComo, AnioNacimiento, Aficiones, PublicaciónTitulo, PublicacionDescripcion.
+    El envío se realiza a la página de w3school vista en la actividad anterior
+
+Restricciones en cuanto a los datos/atributos
+
+    Todos los datos/atributos son obligatorios. En el caso de Aficiones, es obligatorio marcar al menos 2.
+    TipoDocumento puede tomar uno de los siguientes 2 valores: "DNI", "NIE"
+    CuentaComo puede tomar uno de los siguientes 2 valores: "Particular", "Empresa"
+    Aficiones es una lista separada por coma. Los valores posibles para cada elemento de la lista se correponden con las 2 primeras letras en mayúscula de cada afición: "MU", "DE", "VI", "MA", "AR", "LE". Por ejemplo, si el usuario selecciona Artes y Lectura el envío es "AR, LE".
+    DniNie se valida según el valor que tome TipoDocumento, siguiendo el siguiente algoritmo.
+    CódigoPostal debe contener 5 números y debe comenzar por 38
+    Telefono debe tener el formato (+34)922123123
+    AnioNacimiento es un valor entre 1920 y 2010
+    Contrasena tiene una logitud de 8 caracteres que deben ser números
+    NombreUsuario, Nombre, Apellidos deben tener mínimo 4 y máximo 20 caracteres
+    PublicaciónTitulo debe tener mínimo 4 y máximo 15 caracteres
+    PublicaciónDescripcion debe tener mínimo 4 y máximo 120 caracteres
+
+Información de estado
+
+El formulario debe mostrar la siguiente información de estado al usuario:
+
+    Para todos los datos se muestra información en caso de error, colocada bajo el borde rojo que indica error
+    Los datos PublicacionTitulo y PublicacionDescripcion muestra el número de caracteres introducidos
+    Cuando el dato/atributo introducido es correcto (tras una corrección por parte del usuario) se debe reflejar dicho estado (válido)
+    El checkbox "Mostrar contraseña" actua sobre el datos/atributo Contrasena
+
+Aspecto del formulario
+
+    La distribución y aspecto de los elementos debe ser la que se muestra en esta actividad
+    Todos los elementos HTML excepto los select, checkbox y radio tienen placeholder
+    La página que contiene el formulario tiene 2 partes:
+
+        Partes izquierda: el formulario
+        Parte derecha: los mensajes por defecto que muestra el sistema. Los debes extraer de la propiedad validationMessage de los elementos HTML
+
+Normas a tener en cuenta - LEER BIEN
+
+    Programar las normas de accesibilidad que hemos visto en clase (label, type, etc.)
+    Es incorrecto utilizar <br> para distribución de elementos HTML. Se debe utilizar flex.
+    Para programar las restricción siempre programar todo lo posible en atributos HTML y pseudoclases CSS. Programar en JS sólo cuando sea necesario
+    Se siguen las normas de programación como por ejemplo: CamelCase, funciones flecha, métodos de arrays, código modularizado, funcionalidades no repetidas, ausencia de código innecesario, etc.
+    Acceso a los elementos del DOM exclusivamente a través del DOM Static Selector
+    Debes utilizar módulos ESM
+
+ 
+IMPORTANTE para la entrega:
+
+    Subir a EVAGD los 3 ficheros "típicos": .html, .css y .js. en un zip. El html se tiene que llamar index.html.
+    Subir a github.io: <tu_nombre_github>.github.io/DEW/UT04-02/index.html
