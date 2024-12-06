@@ -7,6 +7,8 @@ const DOM = {
     contra: document.getElementById('contra'),
     checkpass: document.getElementById('checkpass'),
     anionacimiento: document.getElementById('anionacimiento'),
+    titulo: document.getElementById('tituloDescripcion'),
+    descripcion: document.getElementById('descripcion')
 };
 
 DOM.checkpass.addEventListener('change', showPassword);
@@ -16,7 +18,7 @@ DOM.form.addEventListener('submit', (e) => {
     let hasErrors = false;
 
     // Validate individual fields
-    const fields = ['nombreUser', 'contra', 'nombreUser', 'apellido', 'telefono', 'anionacimiento'];
+    const fields = ['nombreUser', 'contra', 'nombreUser', 'apellido', 'telefono', 'anionacimiento', 'tituloDescripcion', 'descripcion'];
     fields.forEach(fieldId => {
         const field = document.getElementById(fieldId);
         const message = field.validationMessage;
