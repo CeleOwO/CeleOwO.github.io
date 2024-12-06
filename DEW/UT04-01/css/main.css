@@ -17,32 +17,33 @@ form {
 }
 /*--Input required--*/
 
+
 /* input[type="text"]:required{
-    background-color: rgba(255, 0, 0, 0.452);
+    border-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="password"]:required{
-    background-color: rgba(255, 0, 0, 0.452);
+    border-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="checkbox"]:required{
-    background-color: rgba(255, 0, 0, 0.452);
+    border-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="tel"]:required{
-    background-color: rgba(255, 0, 0, 0.452);
+    border-color: rgba(255, 0, 0, 0.452);
 }
 
 input[type="number"]:required{
-    background-color: rgba(255, 0, 0, 0.452);
+    border-color: rgba(255, 0, 0, 0.452);
 }
 
 select:required{
-    background-color: rgba(255, 0, 0, 0.452);
+    border-color: rgba(255, 0, 0, 0.452);
 }
 
 textarea:required{
-    background-color: rgba(255, 0, 0, 0.452);
+    border-color: rgba(255, 0, 0, 0.452);
 } */
 
 

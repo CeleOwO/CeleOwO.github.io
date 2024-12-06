@@ -7,18 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <script type="module" src="./js/main.js"></script>
     <form action="https://www.w3schools.com/action_page.php" id="form" novalidate>
         <fieldset class="field1">
             <legend>Datos Usuario</legend>
             <label for="NombreUsuario">Nombre de usuario
                 <input required type="text" name="NombreUsuario" id="nombreUser" placeholder="UserName">
+                <span id="nombreUserValidation"></span>
             </label>
             <label for="Contrasena">Contraseña
-                <input required type="password" name="Contrasena" id="contra" placeholder="Introduce Contraseña" maxlength="8" minlength="8">
+                <input required type="password" name="Contrasena" id="contra" placeholder="Introduce Contraseña" maxlength="8" minlength="8" pattern="\d*">
+                <span id="contraValidation"></span>
             </label>
             <label for="checkpass" class="checkpass">Mostrar Contraseña
                 <input type="checkbox" name="checkpass" id="checkpass" class="checkpass" onchange="showPassword()">
+                <span id="checkpassValidation"></span>
             </label>
         </fieldset>
         <fieldset class="field2">
@@ -26,15 +28,19 @@
             <div class="persodata">
                 <label for="Nombre">Nombre
                     <input required type="text" name="Nombre" id="nombre" placeholder="Nombre" minlength="4" maxlength="20">
+                    <span id="nombreValidation"></span>
                 </label>
                 <label for="Apellidos">Apellidos
                     <input required type="text" name="Apellidos" id="apellido" placeholder="Apellidos" minlength="4" maxlength="20">
+                    <span id="apellidoValidation"></span>
                 </label>
                 <label for="Telefono">Telefono
                     <input required type="tel" name="Telefono" id="telefono" placeholder="Ejem: (+34)922123123" pattern="(+34)[0-9]{9}">
+                    <span id="telefonoValidation"></span>
                 </label>
                 <label for="CodigoPostal">Código Postal
                     <input required type="number" name="CodigoPostal" id="codPostal" placeholder="38XXX" pattern="[3]{1}[8]{1}[0-9]{3}">
+                    <span id="codPostalValidation"></span>
                 </label>
             </div>
             <div class="dni-etc">
@@ -56,44 +62,54 @@
                 </label>
                 <label for="AnioNacimiento">Año de Nacimiento
                 <select name="AnioNacimiento" id="anionacimiento">
-
+                    <option value="1920">1920</option>
                 </select>
                 </label>
             </div>
             <div class="hobbies">
                 <label for="Aficiones" class="aficiones">Elige tus aficiones:
                     <label for="musica" class="musica">Música
-                        <input type="checkbox" name="MU" id="musica">
+                        <input type="checkbox" name="Aficiones" id="musica" value="MU" class="hobby">
+                        <span id="musicaValidation" hidden></span>
                     </label>
                     <label for="deporte" class="deporte">Deporte
-                        <input type="checkbox" name="DE" id="deporte">
+                        <input type="checkbox" name="Aficiones" id="deporte" value="DE" class="hobby">
+                        <span id="deporteValidation" hidden></span>
                     </label>
                     <label for="videojuegos" class="videojuegos">Videojuegos
-                        <input type="checkbox" name="VI" id="videojuegos">
+                        <input type="checkbox" name="Aficiones" id="videojuegos" value="VI" class="hobby">
+                        <span id="videojuegosValidation" hidden></span>
                     </label>
                     <label for="manualidades" class="manualidades">Manualidades
-                        <input type="checkbox" name="MA" id="manualidades">
+                        <input type="checkbox" name="Aficiones" id="manualidades" value="MA" class="hobby">
+                        <span id="manualidadesValidation" hidden></span>
                     </label>
                     <label for="artes" class="artes">Artes
-                        <input type="checkbox" name="AR" id="artes">
+                        <input type="checkbox" name="Aficiones" id="artes" value="AR" class="hobby">
+                        <span id="artesValidation" hidden></span>
                     </label>
                     <label for="lectura" class="lectura">Lectura
-                        <input type="checkbox" name="LE" id="lectura">
+                        <input type="checkbox" name="Aficiones" id="lectura" value="LE" class="hobby">
+                        <span id="lecturaValidation" hidden></span>
                     </label>
                 </label>
+                <span id="hobbiesValidation" style="color: red;"></span>
             </div>
         </fieldset>
         <fieldset class="field3">
             <legend>Datos Publicación</legend>
             <label for="PublicaciónTitulo" class="field3-titu">Título:
-                <input required type="text" name="PublicaciónTitulo" id="titulo" placeholder="Título de la publicación" maxlength="15" minlength="4">
+                <input required type="text" name="PublicaciónTitulo" id="tituloDescripcion" placeholder="Título de la publicación" maxlength="15" minlength="4" oninput="updateTituloCharCount()">
+                <span id="tituloValidation"></span>
+                <span id="tituloCharCount">0/15</span>
             </label>
             <label for="PublicacionDescripcion" class="field3-descrip">Descripción:
-                <textarea required name="PublicacionDescripcion" id="descripcion" cols="30" rows="10"  form="form" minlength="4" maxlength="120">
-                </textarea>
+                <textarea required name="PublicacionDescripcion" id="descripcion" cols="30" rows="10" form="form" minlength="4" maxlength="120"></textarea>
+                <span id="charCount">0/120</span>
             </label>
         </fieldset>
         <input type="submit" value="Enviar a w3school">
     </form>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
